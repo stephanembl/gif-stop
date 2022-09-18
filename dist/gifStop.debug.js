@@ -141,7 +141,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    for (_i = 0, _len = nodeList.length; _i < _len; _i++) {
 	      node = nodeList[_i];
-	      console.log(node);
 	      if (node.tagName !== 'IMG' && isImgAlreadySetup(node)) {
 	        continue;
 	      }
