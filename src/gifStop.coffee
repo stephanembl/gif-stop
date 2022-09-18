@@ -22,7 +22,7 @@ module.exports = class GifStop
         @getConfig = -> config
         getNodeList = -> nodeList
 
-        nodeList = [nodeList] unless nodeList instanceof NodeList
+        # nodeList = [nodeList] unless nodeList instanceof NodeList
 
         for node in nodeList
             continue if node.tagName isnt 'IMG' and isImgAlreadySetup node

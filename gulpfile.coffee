@@ -16,8 +16,6 @@ onCoffeelintFailure = (numberOfWarnings, numberOfErrors) =>
             Error count: #{numberOfErrors}.
     """
 
-gulp.task 'default', ['compile']
-
 gulp.task 'compile', =>
     gulp.src(scriptsEntryPoint)
         # .pipe($.coffeelint(optFile: coffeeLintRules))
@@ -41,3 +39,5 @@ gulp.task 'compile', =>
         ))
         .pipe($.rename('gifStop.min.js'))
         .pipe(gulp.dest(distDirectory))
+
+gulp.task 'default', gulp.series('compile')
